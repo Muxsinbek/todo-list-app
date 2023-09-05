@@ -24,4 +24,13 @@ jobs:
           context: .
           push: true
           tags: muxsinbek/todo-list-app:latest                 
+<<<<<<< HEAD
  
+=======
+      - uses: actions-hub/kubectl@master
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+      - uses: actions-hub/kubectl@master
+        with:
+          args: apply -f ./manifests/
+>>>>>>> f698d70 (Add deploy job to workflow cd)
